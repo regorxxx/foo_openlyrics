@@ -82,7 +82,11 @@ metadb_v2_rec_t get_full_metadata(metadb_handle_ptr track)
     }
 
     metadb_v2_rec_t result = {};
-    result.info = track->get_full_info_ref(fb2k::noAbort);
+    try {
+	result.info = track->get_full_info_ref(fb2k::noAbort);
+	if (!result.info.is_valid()) {result.info = nullptr;}
+    } 
+    catch (...) {result.info = nullptr;}
     return result;
 #endif
 }
