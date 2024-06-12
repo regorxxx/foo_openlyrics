@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#define OPENLYRICS_VERSION "1.8"
+#define OPENLYRICS_VERSION "1.8.1"
 
 // Declaration of your component's version information
 // Since foobar2000 v1.0 having at least one of these in your DLL is mandatory to let the troubleshooter tell different versions of your component apart.
